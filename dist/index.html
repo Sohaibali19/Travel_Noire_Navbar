@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TN Travel Noire</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+
+<nav id="navbar" class = "sticky text-[16px] justify-between  items-center flex p-12  w-full h-[70px] bg-[#001D2E]  border-b-4 border-[green]  lg:justify-between " style = "font-family : 'Lora', sans-serif">
+    
+    <!-- Cross button -->
+    <div class="cross-btn absolute  ">
+        <button type="button" id="btn-cross" onclick="toggleshow()" class="bg-transparent border-0  h-[18px] w-[25.13px] hidden ">
+            <div class="h-[2px]  w-[25px] bg-white mb-[18px] rotate-45 translate-x-0 translate-y-[11px]"></div>
+            <div class="h-[2px]  w-[25px]  bg-white -rotate-45 translate-x-0 translate-y-[-10px] "></div>  
+        </button>
+    </div>
+    
+
+        <!--  center Logo  -->
+        <div class="nav-logo lg:ml-[475px] sm:ml-[200px] ">
+            <a href="">
+                <picture class="tn-img">
+                    <img src="logo.png" alt="Travel Noire" class =" h-[30.48px] w-[160px] ">
+                </picture>
+            </a>
+        </div>
+
+        <!-- button right -->
+    <div class="menu-line lg:mr-0 sm:mr-[10px]"> 
+        <button type="button" id ='btn1' onclick="toggleHide()" class="bg-transparent border-0   h-[18px] w-[25.13px]   text-right ">
+                <div class="h-[2px]  w-[25px] bg-white mb-2"></div>
+                <div class="h-[2px]  w-[25px] ml-2 bg-white "></div>  
+        </button>
+    </div>
+</nav> 
+<!--  Cross button  menu bar -->
+
+<ul class="navbar  bg-[#001D2E] lg:pb-6 sm:pb-12 border-b-4 border-[green] hidden lg:items-left sm:items-center"  id="dropdown">
+    <!-- Culture items -->
+    <li class="navbar__nav-item w-full  ">
+        <div class="navbar__link flex flex-col  w-full  pl-[201px]    lg:ml-4 sm:ml-0 ">
+                <a href="" class = "lg:text-[75px] lg:pt-6 sm:pt-10 font-['Tungsten']  text-left tracking-tighter font-[350px] text-[#f6f06a]   sm:text-[50px] lg:ml-0 sm:ml-20" style ="font-family: 'Tungsten', sans-serif">Culture</a>
+        
+            <!-- sub-items in culture -->
+            <ul class="sub-menu-items flex list-none lg:text-[22px] sm:text-[18px] font-bold  absolute mt-[110px]  lg:mr-0 sm:mr-10 gap-6 text-[#66b2af] tracking-[-.25px] " style = 'font-family: "Gotham Narrow",sans-serif;'>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Arts</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Expats</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a] ">
+                    <a href="" >Experiences</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Food</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="navbar__nav-item w-full">
+        <div class="navbar__link flex flex-col    w-full   pl-[201px]  lg:ml-4 sm:ml-0">
+            <a href="" class = "lg:text-[75px] lg:pt-6 sm:pt-10 font-['Tungsten']  text-left tracking-tighter font-[350px] text-[#f6f06a]   sm:text-[40px] lg:ml-0 sm:ml-20" style ="font-family: 'Tungsten', sans-serif">NEWS</a>
+
+            <ul class="sub-menu-items flex sm:text-[18px] lg:text-[22px] font-bold absolute lg:mt-28 sm:mt-[100px] gap-6 font-['Gotham Narrow', 'sans-serif'] text-[#66b2af] tracking-[-.25px] lg:mr-0 sm:ml-16 ">
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="#"  >Air Lines</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="#" >Cruises</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="navbar__nav-item w-full">
+        <div class="navbar__link flex flex-col   pl-[201px]   lg:ml-4 sm:ml-0">
+            <a href="" class = "lg:text-[75px] lg:pt-6 sm:pt-10 font-['Tungsten']  text-left tracking-tighter font-[350px] text-[#f6f06a]   sm:text-[44px] lg:ml-0 sm:ml-10" style ="font-family: 'Tungsten', sans-serif">Plan and Shop</a>
+
+            <ul class="sub-menu-items flex lg:text-[22px] sm:text-[18px] font-bold absoulte lg:mt-[-22px] sm:mt-[0px] lg:mr-0 sm:mr-12  font-['Gotham Narrow', sans-serif] gap-4 text-[#66b2af] tracking-[-.25px]  ">
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Stay</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Travel Gear</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Travel Tips</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]" >
+                    <a href="" >Travel Deals</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li class="navbar__nav-item ">
+        <div class="navbar__link flex flex-col   lg:pl-[201px] sm:pl-[100px]   lg:ml-4 sm:ml-0">
+            <a href="" class = "lg:text-[75px] sm:text-[50px] pt-6  font-['Tungsten']  text-left  lg:ml-0 sm:ml-[132px] tracking-tighter font-[350px] text-[#f6f06a] " style ="font-family: 'Tungsten', sans-serif">City Guides</a>
+
+            <ul class="sub-menu-items flex lg:text-[22px] sm:text-[18px] font-bold gap-4 absolute lg:mt-28 sm:mt-24  font-['Gotham Narrow', sans-serif] text-[#66b2af] tracking-[-.25px]  lg:ml-0 sm:ml-10 ">
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >North America</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >South America</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Europe</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Asia</a>
+                </li>
+                <li class="navbar_link hover:text-[#f6f06a]">
+                    <a href="" >Africa</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+    
+</ul>
+
+ <script src ="\src\list.js"></script>
+</body>
+</html>
